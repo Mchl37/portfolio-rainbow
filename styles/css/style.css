@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+html {
+  height: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Italiana", serif;
+  background-color: #fffce6;
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}
+
+header #title {
+  font-family: "Italiana", serif;
+  color: #fff;
+  font-size: 3rem;
+  margin: 0;
+}
+
+header .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 1rem 6rem;
+}
+
+header .menu {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+header .menu__item {
+  display: inline;
+  padding: 0 0 0 2rem;
+}
+
+header .menu__item a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: .05rem;
+}
+
+header .rainbow {
+  width: 100%;
+}
+
+header .rainbow__item {
+  height: .5rem;
+}
+
+.accueil {
+  width: 100vw;
+  height: 100vh;
+}
+
+.accueil .accueil__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-top: 15%;
+}
+
+.accueil .accueil__content #profile {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.accueil .accueil__content p {
+  padding: 10px;
+  margin: 0 0 60px 0;
+  font-family: "Italiana", serif;
+  font-size: 3rem;
+}
+
+.accueil .accueil__content p span {
+  text-decoration: underline;
+}
+
+.accueil .accueil__content .button {
+  width: 55px;
+  height: 55px;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.accueil .accueil__content .button::before {
+  content: '';
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffbe0b), color-stop(#ffa11b), color-stop(#ff832e), color-stop(#ff6441), color-stop(#ff4553), color-stop(#ff346c), color-stop(#fc2987), color-stop(#f12ca2), color-stop(#d949c5), color-stop(#b662e1), color-stop(#8676f5), to(#3a86ff));
+  background-image: linear-gradient(to bottom, #ffbe0b, #ffa11b, #ff832e, #ff6441, #ff4553, #ff346c, #fc2987, #f12ca2, #d949c5, #b662e1, #8676f5, #3a86ff);
+  border-radius: 50% 50% 0% 0%;
+  z-index: -1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.accueil .accueil__content .button:hover::before {
+  top: 0px;
+  border-radius: 0;
+}
+
+.accueil .accueil__content .button #chevron {
+  width: 40px;
+  margin-top: 3px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .container__content .gallery {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: 600px;
+  height: 150px;
+}
+
+.container .container__content .gallery li {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin: -100px;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.container .container__content .gallery li:hover {
+  opacity: 1;
+}
+
+.container .container__content .gallery li.gallery__item1 {
+  top: 0;
+  left: 0;
+}
+
+.container .container__content .gallery li.gallery__item2 {
+  bottom: 0;
+  left: 25%;
+}
+
+.container .container__content .gallery li.gallery__item3 {
+  top: 0;
+  left: 50%;
+}
+
+.container .container__content .gallery li.gallery__item4 {
+  bottom: 0;
+  left: 75%;
+}
+
+.container .container__content .gallery li.gallery__item5 {
+  top: 0;
+  left: 100%;
+}
+
+.container .container__content .gallery li .bg {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container .container__content .gallery li.gallery__item1 .bg {
+  background: url(../../images/NFT-preview-card.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.container .container__content .gallery li.gallery__item2 .bg {
+  background: url(../../images/Base-Apparel.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.container .container__content .gallery li.gallery__item3 .bg {
+  background: url(../../images/Article-preview.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.container .container__content .gallery li.gallery__item4 .bg {
+  background: url(../../images/Base-Apparel.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.container .container__content .gallery li.gallery__item5 .bg {
+  background: url(../../images/NFT-preview-card.png);
+  background-size: cover;
+  background-position: center;
+}
+/*# sourceMappingURL=style.css.map */
