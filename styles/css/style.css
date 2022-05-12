@@ -17,6 +17,7 @@ header {
   width: 100%;
   height: auto;
   background-color: #000;
+  z-index: 1;
 }
 
 header #title {
@@ -103,7 +104,8 @@ header .rainbow__item {
 }
 
 .accueil .accueil__content p span {
-  text-decoration: underline;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #ffbe0b));
+  background: linear-gradient(to bottom, transparent 50%, #ffbe0b 50%);
 }
 
 .accueil .accueil__content .button {
@@ -151,10 +153,46 @@ header .rainbow__item {
   margin-top: 3px;
 }
 
-.container {
+.presentation {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #000;
+}
+
+.presentation .presentation__content {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: 600px;
+}
+
+.presentation .presentation__content h2 {
+  font-size: 3rem;
+}
+
+.presentation .presentation__content p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.3rem;
+}
+
+.projet {
+  width: 100vw;
+  height: 100vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,7 +205,12 @@ header .rainbow__item {
           align-items: center;
 }
 
-.container .container__content .gallery {
+.projet h2 {
+  z-index: 1;
+  font-size: 5rem;
+}
+
+.projet .projet__content .gallery {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -179,7 +222,7 @@ header .rainbow__item {
   height: 150px;
 }
 
-.container .container__content .gallery li {
+.projet .projet__content .gallery li {
   width: 200px;
   height: 200px;
   position: absolute;
@@ -190,71 +233,176 @@ header .rainbow__item {
   margin: -100px;
   overflow: hidden;
   opacity: 0.8;
+  cursor: pointer;
 }
 
-.container .container__content .gallery li:hover {
+.projet .projet__content .gallery li:hover {
   opacity: 1;
 }
 
-.container .container__content .gallery li.gallery__item1 {
+.projet .projet__content .gallery li.gallery__item1 {
   top: 0;
   left: 0;
 }
 
-.container .container__content .gallery li.gallery__item2 {
+.projet .projet__content .gallery li.gallery__item2 {
   bottom: 0;
   left: 25%;
 }
 
-.container .container__content .gallery li.gallery__item3 {
+.projet .projet__content .gallery li.gallery__item3 {
   top: 0;
   left: 50%;
 }
 
-.container .container__content .gallery li.gallery__item4 {
+.projet .projet__content .gallery li.gallery__item4 {
   bottom: 0;
   left: 75%;
 }
 
-.container .container__content .gallery li.gallery__item5 {
+.projet .projet__content .gallery li.gallery__item5 {
   top: 0;
   left: 100%;
 }
 
-.container .container__content .gallery li .bg {
+.projet .projet__content .gallery li .bg {
   width: 100%;
   height: 100%;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.container .container__content .gallery li.gallery__item1 .bg {
+.projet .projet__content .gallery li.gallery__item1 .bg {
   background: url(../../images/NFT-preview-card.png);
   background-size: cover;
   background-position: center;
 }
 
-.container .container__content .gallery li.gallery__item2 .bg {
+.projet .projet__content .gallery li.gallery__item2 .bg {
   background: url(../../images/Base-Apparel.png);
   background-size: cover;
   background-position: center;
 }
 
-.container .container__content .gallery li.gallery__item3 .bg {
+.projet .projet__content .gallery li.gallery__item3 .bg {
   background: url(../../images/Article-preview.png);
   background-size: cover;
   background-position: center;
 }
 
-.container .container__content .gallery li.gallery__item4 .bg {
+.projet .projet__content .gallery li.gallery__item4 .bg {
   background: url(../../images/Base-Apparel.png);
   background-size: cover;
   background-position: center;
 }
 
-.container .container__content .gallery li.gallery__item5 .bg {
+.projet .projet__content .gallery li.gallery__item5 .bg {
   background: url(../../images/NFT-preview-card.png);
   background-size: cover;
   background-position: center;
+}
+
+.footer {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+}
+
+.footer .footer__content {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+.footer .footer__content ul {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  grid-auto-flow: row;
+  grid-gap: 24px;
+  justify-items: center;
+  margin: auto;
+  list-style: none;
+}
+
+@media (min-width: 500px) {
+  .footer .footer__content ul {
+    grid-auto-flow: column;
+  }
+}
+
+.footer .footer__content a {
+  color: white;
+  text-decoration: none;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
+          box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.footer .footer__content a:hover {
+  -webkit-box-shadow: inset 0 -1.2em 0 rgba(255, 255, 255, 0.4);
+          box-shadow: inset 0 -1.2em 0 rgba(255, 255, 255, 0.4);
+}
+
+.footer .footer__content li:last-child {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.footer .footer__content li:hover ~ li p {
+  -webkit-animation: wave-animation 0.3s infinite;
+          animation: wave-animation 0.3s infinite;
+}
+
+@-webkit-keyframes wave-animation {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  75% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
