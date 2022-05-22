@@ -36,6 +36,7 @@ header {
         align-items: center;
         margin: auto;
         padding: 1rem 6rem;
+        max-width: 50%;
     }
 
     .menu {
@@ -76,10 +77,10 @@ header {
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         text-align: center;
-        padding-top: 15%;
+        top: 55%;
+        transform: translateY(-50%);
 
         #profile {
             width: 150px;
@@ -93,11 +94,10 @@ header {
             font-family: $font-title;
 
             font: {
-                size: 3rem;
+                size: calc(3rem + 0.75vw);
             }
 
             span {
-                //text-decoration: underline;
                 background: linear-gradient(to bottom,
                         transparent 50%,
                         #ffbe0b 50%);

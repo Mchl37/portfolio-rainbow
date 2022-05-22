@@ -39,6 +39,7 @@ header .navigation {
           align-items: center;
   margin: auto;
   padding: 1rem 6rem;
+  max-width: 50%;
 }
 
 header .menu {
@@ -80,14 +81,13 @@ header .rainbow__item {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding-top: 15%;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .accueil .accueil__content #profile {
@@ -100,7 +100,7 @@ header .rainbow__item {
   padding: 10px;
   margin: 0 0 60px 0;
   font-family: "Italiana", serif;
-  font-size: 3rem;
+  font-size: calc(3rem + 0.75vw);
 }
 
 .accueil .accueil__content p span {
