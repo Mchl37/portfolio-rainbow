@@ -166,11 +166,11 @@ header .rainbow__item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
   background-color: #000;
 }
 
 .presentation .presentation__content {
-  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -190,7 +190,7 @@ header .rainbow__item {
   font-size: 1.3rem;
 }
 
-.projet {
+.projets {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -205,12 +205,12 @@ header .rainbow__item {
           align-items: center;
 }
 
-.projet h2 {
+.projets h2 {
   z-index: 1;
   font-size: 5rem;
 }
 
-.projet .projet__content .gallery {
+.projets .projets__content .gallery {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -222,7 +222,7 @@ header .rainbow__item {
   height: 150px;
 }
 
-.projet .projet__content .gallery li {
+.projets .projets__content .gallery li {
   width: 200px;
   height: 200px;
   position: absolute;
@@ -236,67 +236,67 @@ header .rainbow__item {
   cursor: pointer;
 }
 
-.projet .projet__content .gallery li:hover {
+.projets .projets__content .gallery li:hover {
   opacity: 1;
 }
 
-.projet .projet__content .gallery li.gallery__item1 {
+.projets .projets__content .gallery li.gallery__item1 {
   top: 0;
   left: 0;
 }
 
-.projet .projet__content .gallery li.gallery__item2 {
+.projets .projets__content .gallery li.gallery__item2 {
   bottom: 0;
   left: 25%;
 }
 
-.projet .projet__content .gallery li.gallery__item3 {
+.projets .projets__content .gallery li.gallery__item3 {
   top: 0;
   left: 50%;
 }
 
-.projet .projet__content .gallery li.gallery__item4 {
+.projets .projets__content .gallery li.gallery__item4 {
   bottom: 0;
   left: 75%;
 }
 
-.projet .projet__content .gallery li.gallery__item5 {
+.projets .projets__content .gallery li.gallery__item5 {
   top: 0;
   left: 100%;
 }
 
-.projet .projet__content .gallery li .bg {
+.projets .projets__content .gallery li .bg {
   width: 100%;
   height: 100%;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.projet .projet__content .gallery li.gallery__item1 .bg {
+.projets .projets__content .gallery li.gallery__item1 .bg {
   background: url(../../images/NFT-preview-card.png);
   background-size: cover;
   background-position: center;
 }
 
-.projet .projet__content .gallery li.gallery__item2 .bg {
+.projets .projets__content .gallery li.gallery__item2 .bg {
   background: url(../../images/Base-Apparel.png);
   background-size: cover;
   background-position: center;
 }
 
-.projet .projet__content .gallery li.gallery__item3 .bg {
+.projets .projets__content .gallery li.gallery__item3 .bg {
   background: url(../../images/Article-preview.png);
   background-size: cover;
   background-position: center;
 }
 
-.projet .projet__content .gallery li.gallery__item4 .bg {
+.projets .projets__content .gallery li.gallery__item4 .bg {
   background: url(../../images/Base-Apparel.png);
   background-size: cover;
   background-position: center;
 }
 
-.projet .projet__content .gallery li.gallery__item5 .bg {
+.projets .projets__content .gallery li.gallery__item5 .bg {
   background: url(../../images/NFT-preview-card.png);
   background-size: cover;
   background-position: center;
@@ -304,7 +304,7 @@ header .rainbow__item {
 
 .footer {
   width: 100vw;
-  height: 50vh;
+  height: 20vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -315,14 +315,11 @@ header .rainbow__item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
   background-color: #000;
 }
 
 .footer .footer__content {
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -337,8 +334,11 @@ header .rainbow__item {
   display: inline-grid;
   grid-auto-flow: row;
   grid-gap: 24px;
-  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto;
+  padding: 0;
   list-style: none;
 }
 
@@ -404,5 +404,9 @@ header .rainbow__item {
     -webkit-transform: rotate(-15deg);
             transform: rotate(-15deg);
   }
+}
+
+.footer .footer__content #copyright {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

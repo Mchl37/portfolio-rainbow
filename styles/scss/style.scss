@@ -150,10 +150,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $white;
     background-color: $background-dark;
 
     .presentation__content {
-        color: $white;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -177,7 +177,7 @@ header {
     }
 }
 
-.projet {
+.projets {
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -193,7 +193,7 @@ header {
         }
     }
 
-    .projet__content {
+    .projets__content {
 
         .gallery {
             position: absolute;
@@ -287,16 +287,15 @@ header {
 
 .footer {
     width: 100vw;
-    height: 50vh;
+    height: 20vh;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $white;
     background-color: $background-dark;
 
     .footer__content {
-        color: $white;
-        display: flex;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -308,8 +307,9 @@ header {
             display: inline-grid;
             grid-auto-flow: row;
             grid-gap: 24px;
-            justify-items: center;
+            align-items: center;
             margin: auto;
+            padding: 0;
             list-style: none;
         }
 
@@ -352,6 +352,10 @@ header {
             75% {
                 transform: rotate(-15deg);
             }
+        }
+
+        #copyright {
+            text-align: center;
         }
     }
 }
