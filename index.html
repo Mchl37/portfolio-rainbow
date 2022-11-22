@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="./styles/css/normalize.css">
     <link rel="stylesheet" href="./styles/css/style.css">
     <link rel="shortcut icon" href="./images/favicon_io/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="./scripts/script.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="navigation">
             <h1 id="title">Mchl.</h1>
+
+            <!-- Menu -->
             <nav>
                 <ul class="menu">
                     <li class="menu__item"><a href="#accueil">Accueil</a></li>
@@ -22,6 +25,23 @@
                     <li class="menu__item"><a href="#projets">Projets</a></li>
                 </ul>
             </nav>
+
+            <!-- Menu mobile et tablette -->
+            <div id="sidenav" class="sidenav">
+                <a id="closeBtn" class="close" href="javascript:void(0)">x</a>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#presentation">Présentation</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                </ul>
+            </div>
+            <a id="openBtn" class="open" href="javascript:void(0)">
+                <span class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
         </div>
         <div class="rainbow">
             <div class="rainbow__item" style="background-color: #ffbe0b;"></div>
@@ -53,7 +73,7 @@
             <p>Développeur front-end basé à Paris, je suis en alternance au sein de CNP Assurances.<br>
                 Étudiant à Efrei Paris, je suis en alternance au sein de CNP Assurances en tant que <u>développeur full
                     stack</u>.
-
+                Passionné par le développement web, l'UI/UX et l'accessibilité
             </p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi esse ea ratione alias nesciunt
                 reprehenderit! Atque quas eaque, quo velit illo ipsa, alias assumenda veniam quis architecto molestiae.
@@ -97,10 +117,10 @@
                 <li><a href="https://codepen.io/mchl37" target="_blank" rel="noopener noreferrer">Codepen</a></li>
                 <li><a href="mailto:michel.guelin@mailo.com" target="_blank" rel="noopener noreferrer">Email</a></li>
                 <li>
-                    <p>👋</p>
+                    <p>👋🏻</p>
                 </li>
             </ul>
-            <p id="copyright">Copyright &copy; 2022 Mchl</p>
+            <p id="copyright">Copyright &copy; 2022 Mchl | Inspiré par ...</p>
         </div>
     </div>
 </body>

@@ -14,6 +14,8 @@ body {
     overflow-x: hidden;
 }
 
+/********** Header **********/
+
 header {
     position: fixed;
     width: 100%;
@@ -53,12 +55,71 @@ header {
     .menu__item {
         display: inline;
         padding: 0 0 0 2rem;
+        transition: all 0.5s;
+
+        &:hover {
+            text-decoration: underline;
+            color: $white;
+            text-underline-offset: 8px;
+            text-decoration-thickness: 2px;
+        }
 
         a {
             text-decoration: none;
             color: $white;
             letter-spacing: .05rem;
         }
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: -250px;
+        background-color: $background-dark;
+        padding-top: 60px;
+        transition: right 0.5s ease;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: $white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #111;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidenav.active {
+        right: 0;
+    }
+
+    .sidenav .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        border-radius: 25px;
     }
 
     .rainbow {
@@ -70,6 +131,7 @@ header {
     }
 }
 
+/********** Accueil **********/
 
 .accueil {
     width: 100vw;
@@ -139,11 +201,13 @@ header {
 
             #chevron {
                 width: 40px;
-                margin-top: 3px;
+                margin-top: 8px; //anciennement 3px
             }
         }
     }
 }
+
+/********** Présentation **********/
 
 .presentation {
     width: 100vw;
@@ -178,6 +242,8 @@ header {
         }
     }
 }
+
+/********** Projets **********/
 
 .projets {
     width: 100vw;
@@ -226,6 +292,7 @@ header {
 
         .gallery li:hover {
             opacity: 1;
+            z-index: 2;
         }
 
         .gallery li.gallery__item1 {
@@ -291,6 +358,8 @@ header {
         }
     }
 }
+
+/********** Footer **********/
 
 .footer {
     width: 100vw;
@@ -368,6 +437,81 @@ header {
         #copyright {
             text-align: center;
             margin-top: 0;
+        }
+    }
+}
+
+/********** Media queries **********/
+
+@include media-min(851px) {
+    #openBtn {
+        display: none;
+    }
+}
+
+@include media-max(850px) {
+    .navigation {
+        max-width: none;
+        padding: 1rem 5rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #openBtn {
+        display: block;
+    }
+}
+
+@include media-max(600px) {
+    header {
+        .navigation {
+            max-width: none;
+            padding: 1rem 2rem;
+        }
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .accueil {
+
+        .accueil__content {
+            top: 55%;
+
+            #profile {
+                max-width: 150px;
+            }
+
+            p {
+                margin: 0 10px 60px 10px;
+
+                font: {
+                    size: calc(2rem + 0.75vw);
+                }
+            }
+        }
+    }
+
+    .presentation {
+
+        .presentation__content {
+            top: 55%;
+            width: 75%;
+
+            h2 {
+                font: {
+                    size: calc(2rem + 0.75vw);
+                }
+            }
+
+            p {
+                font: {
+                    size: 1rem;
+                }
+            }
         }
     }
 }
