@@ -386,6 +386,15 @@ header .rainbow__item {
   #openBtn {
     display: block;
   }
+  .accueil .accueil__content .button {
+    display: none;
+  }
+  .presentation .presentation__content h2 {
+    text-align: center;
+  }
+  .footer .footer__content {
+    font-size: 1rem;
+  }
 }
 @media screen and (max-width: 600px) {
   header .navigation {
