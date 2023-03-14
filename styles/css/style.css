@@ -14,6 +14,17 @@ body {
   overflow-x: hidden;
 }
 
+.slider {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+}
+
+.slider__bloc {
+  scroll-snap-align: start;
+}
+
 /********** Header **********/
 header {
   position: fixed;
@@ -34,7 +45,6 @@ header .navigation {
   align-items: center;
   margin: auto;
   padding: 1rem 6rem;
-  max-width: 50%;
 }
 header .menu {
   list-style-type: none;
@@ -59,11 +69,11 @@ header .menu__item a {
 }
 header .sidenav {
   height: 100%;
-  width: 250px;
+  width: 100vw;
   position: fixed;
   z-index: 2;
   top: 0;
-  right: -250px;
+  right: -100vw;
   background-color: #000;
   padding-top: 60px;
   transition: right 0.5s ease;
@@ -109,11 +119,11 @@ header .rainbow__item {
 }
 
 /********** Accueil **********/
-.accueil {
+#accueil {
   width: 100vw;
   height: 100vh;
 }
-.accueil .accueil__content {
+#accueil .accueil__content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -122,21 +132,31 @@ header .rainbow__item {
   top: 60%;
   transform: translateY(-50%);
 }
-.accueil .accueil__content #profile {
+#accueil .accueil__content #profile {
   width: 150px;
   height: auto;
   margin-bottom: 20px;
 }
-.accueil .accueil__content p {
+#accueil .accueil__content p {
   padding: 10px;
   margin: 0 0 60px 0;
   font-family: "Italiana", serif;
   font-size: calc(3rem + 0.75vw);
 }
-.accueil .accueil__content p span {
+#accueil .accueil__content p span {
   background: linear-gradient(to bottom, transparent 50%, #ffbe0b 50%);
+  /* &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 50%;
+      top: 0;
+      left: 0;
+      box-shadow: 8px 8px 0 0 $background-dark;
+      z-index: -1;
+  } */
 }
-.accueil .accueil__content .button {
+#accueil .accueil__content .button {
   width: 55px;
   height: 55px;
   border: 3px solid black;
@@ -149,7 +169,7 @@ header .rainbow__item {
   overflow: hidden;
   z-index: 0;
 }
-.accueil .accueil__content .button::before {
+#accueil .accueil__content .button::before {
   content: "";
   position: absolute;
   top: 55px;
@@ -161,17 +181,17 @@ header .rainbow__item {
   z-index: -1;
   transition: all 0.5s;
 }
-.accueil .accueil__content .button:hover::before {
+#accueil .accueil__content .button:hover::before {
   top: 0px;
   border-radius: 0;
 }
-.accueil .accueil__content .button #chevron {
+#accueil .accueil__content .button #chevron {
   width: 40px;
   margin-top: 8px;
 }
 
 /********** Présentation **********/
-.presentation {
+#presentation {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -181,7 +201,7 @@ header .rainbow__item {
   color: #fff;
   background-color: #000;
 }
-.presentation .presentation__content {
+#presentation .presentation__content {
   position: absolute;
   top: 60%;
   left: 50%;
@@ -190,110 +210,108 @@ header .rainbow__item {
   padding: 0;
   max-width: 50%;
 }
-.presentation .presentation__content h2 {
-  font-size: calc(3rem + 0.2vw);
-}
-.presentation .presentation__content p {
+#presentation .presentation__content p {
   font-family: "Lato", sans-serif;
   font-size: 1.3rem;
 }
+#presentation .presentation__content p span {
+  font-size: 2.5rem;
+}
 
 /********** Projets **********/
-.projets {
+#projets {
   width: 100vw;
   height: 100vh;
   position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+#projets .projets__content {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  box-shadow: 8px 8px 0 0 #000;
+}
+#projets .projets__content .slider-projet {
+  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.projets .projets__content h2 {
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: calc(5rem + 0.2vw);
+#projets .projets__content .slider-projet .slider-projet__img {
+  max-width: 50%;
 }
-.projets .projets__content .gallery {
+#projets .projets__content .slider-projet .slider-projet__img img {
+  max-width: 100%;
+  display: none;
+}
+#projets .projets__content .slider-projet .slider-projet__img img.active {
+  display: block;
+  animation: fade 0.8s;
+}
+#projets .projets__content .slider-projet .slider-projet__img img.active keyframes fade from {
+  opacity: 0;
+}
+#projets .projets__content .slider-projet .slider-projet__img img.active keyframes fade to {
+  opacity: 1;
+}
+#projets .projets__content .slider-projet .slider-projet__description {
+  width: 100%;
+}
+#projets .projets__content .slider-projet .slider-projet__description .slider-projet__description__item {
+  display: none;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+#projets .projets__content .slider-projet .slider-projet__description .slider-projet__description__item span {
+  font-size: 2.5rem;
+}
+#projets .projets__content .slider-projet .slider-projet__description .slider-projet__description__item h1 {
+  margin: 0 0 0.67em 0;
+}
+#projets .projets__content .slider-projet .slider-projet__description div.active {
+  display: block;
+  animation: fade 0.8s;
+  padding-left: 3rem;
+}
+#projets .projets__content .slider-projet .slider-projet__description div.active keyframes fade from {
+  opacity: 0;
+}
+#projets .projets__content .slider-projet .slider-projet__description div.active keyframes fade to {
+  opacity: 1;
+}
+#projets .projets__content .cont-btn {
+  width: 99, 5%;
+  height: auto;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: center;
+}
+#projets .projets__content .cont-btn .btn-nav {
+  font-size: 50px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+#projets .projets__content__shadow {
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
-  width: 600px;
-  height: 150px;
-}
-.projets .projets__content .gallery li {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  transform: rotate(45deg);
-  transition: 0.5s;
-  margin: -100px;
-  overflow: hidden;
-  opacity: 0.7;
-  cursor: pointer;
-}
-.projets .projets__content .gallery li:hover {
-  opacity: 1;
-  z-index: 2;
-}
-.projets .projets__content .gallery li.gallery__item1 {
-  top: 0;
-  left: 0;
-}
-.projets .projets__content .gallery li.gallery__item2 {
-  bottom: 0;
-  left: 25%;
-}
-.projets .projets__content .gallery li.gallery__item3 {
-  top: 0;
-  left: 50%;
-}
-.projets .projets__content .gallery li.gallery__item4 {
-  bottom: 0;
-  left: 75%;
-}
-.projets .projets__content .gallery li.gallery__item5 {
-  top: 0;
-  left: 100%;
-}
-.projets .projets__content .gallery li .bg {
-  width: 100%;
-  height: 100%;
-  transform: scale(1.5);
-  rotate: -45deg;
-}
-.projets .projets__content .gallery li.gallery__item1 .bg {
-  background: url(../../images/NFT-preview-card.png);
-  background-size: cover;
-  background-position: center;
-}
-.projets .projets__content .gallery li.gallery__item2 .bg {
-  background: url(../../images/Base-Apparel.png);
-  background-size: cover;
-  background-position: center;
-}
-.projets .projets__content .gallery li.gallery__item3 .bg {
-  background: url(../../images/Article-preview.png);
-  background-size: cover;
-  background-position: center;
-}
-.projets .projets__content .gallery li.gallery__item4 .bg {
-  background: url(../../images/Base-Apparel.png);
-  background-size: cover;
-  background-position: center;
-}
-.projets .projets__content .gallery li.gallery__item5 .bg {
-  background: url(../../images/NFT-preview-card.png);
-  background-size: cover;
-  background-position: center;
+  background: #000;
 }
 
 /********** Footer **********/
-.footer {
+#footer {
   width: 100vw;
   height: 20vh;
   position: relative;
@@ -303,7 +321,7 @@ header .rainbow__item {
   color: #fff;
   background-color: #000;
 }
-.footer .footer__content {
+#footer .footer__content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -312,7 +330,7 @@ header .rainbow__item {
   padding: 0;
   font-size: calc(1.2rem + 0.2vw);
 }
-.footer .footer__content ul {
+#footer .footer__content ul {
   display: inline-grid;
   grid-auto-flow: row;
   grid-gap: 24px;
@@ -322,36 +340,24 @@ header .rainbow__item {
   list-style: none;
 }
 @media (min-width: 500px) {
-  .footer .footer__content ul {
+  #footer .footer__content ul {
     grid-auto-flow: column;
   }
 }
-.footer .footer__content a {
+#footer .footer__content a {
   color: white;
   text-decoration: none;
-  box-shadow: inset 0 -1px 0 hsla(0deg, 0%, 100%, 0.4);
+  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
 }
-.footer .footer__content a:hover {
-  box-shadow: inset 0 -1.2em 0 hsla(0deg, 0%, 100%, 0.4);
+#footer .footer__content a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
 }
-.footer .footer__content li:last-child {
+#footer .footer__content li:last-child {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.footer .footer__content li:hover ~ li p {
-  -webkit-animation: wave-animation 0.3s infinite;
-          animation: wave-animation 0.3s infinite;
-}
-@-webkit-keyframes wave-animation {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(20deg);
-  }
-  75% {
-    transform: rotate(-15deg);
-  }
+#footer .footer__content li:hover ~ li p {
+  animation: wave-animation 0.3s infinite;
 }
 @keyframes wave-animation {
   0%, 100% {
@@ -364,7 +370,7 @@ header .rainbow__item {
     transform: rotate(-15deg);
   }
 }
-.footer .footer__content #copyright {
+#footer .footer__content #copyright {
   text-align: center;
   margin-top: 0;
 }
@@ -386,13 +392,13 @@ header .rainbow__item {
   #openBtn {
     display: block;
   }
-  .accueil .accueil__content .button {
+  #accueil .accueil__content .button {
     display: none;
   }
-  .presentation .presentation__content h2 {
+  #presentation .presentation__content h2 {
     text-align: center;
   }
-  .footer .footer__content {
+  #footer .footer__content {
     font-size: 1rem;
   }
 }
@@ -404,24 +410,24 @@ header .rainbow__item {
   .menu {
     display: none;
   }
-  .accueil .accueil__content {
+  #accueil .accueil__content {
     top: 55%;
   }
-  .accueil .accueil__content #profile {
+  #accueil .accueil__content #profile {
     max-width: 150px;
   }
-  .accueil .accueil__content p {
+  #accueil .accueil__content p {
     margin: 0 10px 60px 10px;
     font-size: calc(2rem + 0.75vw);
   }
-  .presentation .presentation__content {
+  #presentation .presentation__content {
     top: 55%;
     width: 75%;
   }
-  .presentation .presentation__content h2 {
+  #presentation .presentation__content h2 {
     font-size: calc(2rem + 0.75vw);
   }
-  .presentation .presentation__content p {
+  #presentation .presentation__content p {
     font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

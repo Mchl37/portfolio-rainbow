@@ -13,116 +13,171 @@
 </head>
 
 <body>
-    <header>
-        <div class="navigation">
-            <h1 id="title">Mchl.</h1>
+    <div class="slider" id="slider">
+        <header>
+            <div class="navigation">
+                <h1 id="title">Mchl.</h1>
 
-            <!-- Menu -->
-            <nav>
-                <ul class="menu">
-                    <li class="menu__item"><a href="#accueil">Accueil</a></li>
-                    <li class="menu__item"><a href="#presentation">Présentation</a></li>
-                    <li class="menu__item"><a href="#projets">Projets</a></li>
-                </ul>
-            </nav>
+                <!-- Menu -->
+                <nav>
+                    <ul class="menu">
+                        <li class="menu__item"><a href="#accueil">Accueil</a></li>
+                        <li class="menu__item"><a href="#presentation">Présentation</a></li>
+                        <li class="menu__item"><a href="#projets">Projets</a></li>
+                    </ul>
+                </nav>
 
-            <!-- Menu mobile et tablette -->
-            <div id="sidenav" class="sidenav">
-                <a id="closeBtn" class="close" href="javascript:void(0)">x</a>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#presentation">Présentation</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                </ul>
-            </div>
-            <a id="openBtn" class="open" href="javascript:void(0)">
-                <span class="burger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </a>
-        </div>
-        <div class="rainbow">
-            <div class="rainbow__item" style="background-color: #ffbe0b;"></div>
-            <div class="rainbow__item" style="background-color: #fb5607;"></div>
-            <div class="rainbow__item" style="background-color: #ff006e;"></div>
-            <div class="rainbow__item" style="background-color: #8338ec;"></div>
-            <div class="rainbow__item" style="background-color: #3a86ff;"></div>
-        </div>
-    </header>
-
-    <div class="accueil" id="accueil">
-        <div class="accueil__content">
-            <img id="profile" src="./images/memoji.png" alt="Avatar">
-            <p>Bonjour, moi c'est <span>Michel</span> !<br>
-                Étudiant à <span>Efrei Paris</span> et aspirant<br>
-                <span>développeur front-end créatif</span>.
-            </p>
-            <div class="button">
-                <a href="#presentation">
-                    <img id="chevron" src="./images/chevron.png" alt="Chevron">
+                <!-- Menu mobile et tablette -->
+                <div id="sidenav" class="sidenav">
+                    <a id="closeBtn" class="close" href="javascript:void(0)">x</a>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#presentation">Présentation</a></li>
+                        <li><a href="#projets">Projets</a></li>
+                    </ul>
+                </div>
+                <a id="openBtn" class="open" href="javascript:void(0)">
+                    <span class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
                 </a>
             </div>
+            <div class="rainbow">
+                <div class="rainbow__item" style="background-color: #ffbe0b;"></div>
+                <div class="rainbow__item" style="background-color: #fb5607;"></div>
+                <div class="rainbow__item" style="background-color: #ff006e;"></div>
+                <div class="rainbow__item" style="background-color: #8338ec;"></div>
+                <div class="rainbow__item" style="background-color: #3a86ff;"></div>
+            </div>
+        </header>
+
+        <div class="slider__bloc" id="accueil">
+            <div class="accueil__content">
+                <img id="profile" src="./images/memoji.png" alt="Avatar">
+                <p>Bonjour, moi c'est <span>Michel</span> !<br>
+                    Étudiant à <span>Efrei Paris</span> et aspirant<br>
+                    <span>développeur front-end créatif</span>.
+                </p>
+                <!-- <div class="button">
+                    <a href="#presentation">
+                        <img id="chevron" src="./images/chevron.png" alt="Chevron">
+                    </a>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="slider__bloc" id="presentation">
+            <div class="presentation__content">
+                <p><span>D</span>éveloppeur front-end basé à Paris, je suis en alternance au sein de CNP Assurances.<br>
+                    Étudiant à Efrei Paris, je suis en alternance au sein de CNP Assurances en tant que <u>développeur
+                        full
+                        stack</u>.
+                    Passionné par le développement web, l'UI/UX et l'accessibilité
+                </p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi esse ea ratione alias nesciunt
+                    reprehenderit! Atque quas eaque, quo velit illo ipsa, alias assumenda veniam quis architecto
+                    molestiae.
+                    Temporibus magni fuga tempore, eius molestiae voluptatum autem obcaecati nisi similique quos neque
+                    est
+                    ut nobis quibusdam quis eaque repudiandae animi numquam libero corporis provident. Ab, magnam
+                    corporis
+                    excepturi repudiandae culpa consequuntur.</p>
+            </div>
+        </div>
+
+        <div class="slider__bloc" id="projets">
+            <div class="projets__content">
+                <div class="slider-projet">
+                    <div class="slider-projet__img">
+                        <img class="slider-projet__img__item active"
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                            alt="">
+                        <img class="slider-projet__img__item"
+                            src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                            alt="">
+                        <img class="slider-projet__img__item"
+                            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                            alt="">
+                        <img class="slider-projet__img__item"
+                            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                            alt="">
+                    </div>
+                    <div class="slider-projet__description">
+                        <div class="slider-projet__description__item active">
+                            <h1>Projet 1</h1>
+                            <table>
+                                <tr>
+                                    <td>Catégorie</td>
+                                    <td>Technologie</td>
+                                </tr>
+                                <tr>
+                                    <td>Site web</td>
+                                    <td>HTML</td>
+                                </tr>
+                                <tr>
+                                    <td>Site web</td>
+                                    <td>CSS</td>
+                                </tr>
+                                <tr>
+                                    <td>Site web</td>
+                                    <td>JavaScript</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="slider-projet__description__item">
+                            <h1>Projet 2</h1>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                        </div>
+                        <div class="slider-projet__description__item">
+                            <h1>Projet 3</h1>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                        </div>
+                        <div class="slider-projet__description__item">
+                            <h1>Projet 4</h1>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-btn">
+                    <div class="btn-nav left">&lsaquo;-</div>
+                    <div class="btn-nav right">-&rsaquo;</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__bloc" id="footer">
+            <div class="footer__content">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/michel-guelin-772842115/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/Mchl37" target="_blank" rel="noopener noreferrer">Github</a></li>
+                    <li><a href="https://www.frontendmentor.io/profile/Mchl37" target="_blank"
+                            rel="noopener noreferrer">Frontend Mentor</a></li>
+                    <li><a href="https://codepen.io/mchl37" target="_blank" rel="noopener noreferrer">Codepen</a></li>
+                    <li><a href="mailto:michel.guelin@mailo.com" target="_blank" rel="noopener noreferrer">Email</a>
+                    </li>
+                    <li>
+                        <p>👋🏻</p>
+                    </li>
+                </ul>
+                <p id="copyright">Copyright &copy; 2023 Mchl
+                    <!--  | Inspiré par ... -->
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="presentation" id="presentation">
-        <div class="presentation__content">
-            <h2>Présentation 👋🏻</h2>
-            <p>Développeur front-end basé à Paris, je suis en alternance au sein de CNP Assurances.<br>
-                Étudiant à Efrei Paris, je suis en alternance au sein de CNP Assurances en tant que <u>développeur full
-                    stack</u>.
-                Passionné par le développement web, l'UI/UX et l'accessibilité
-            </p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi esse ea ratione alias nesciunt
-                reprehenderit! Atque quas eaque, quo velit illo ipsa, alias assumenda veniam quis architecto molestiae.
-                Temporibus magni fuga tempore, eius molestiae voluptatum autem obcaecati nisi similique quos neque est
-                ut nobis quibusdam quis eaque repudiandae animi numquam libero corporis provident. Ab, magnam corporis
-                excepturi repudiandae culpa consequuntur.</p>
-        </div>
-    </div>
-
-    <div class="projets" id="projets">
-        <div class="projets__content">
-            <h2>Projets</h2>
-            <!-- <ul class="gallery">
-                <li class="gallery__item1">
-                    <div class="bg"></div>
-                </li>
-                <li class="gallery__item2">
-                    <div class="bg"></div>
-                </li>
-                <li class="gallery__item3">
-                    <div class="bg"></div>
-                </li>
-                <li class="gallery__item4">
-                    <div class="bg"></div>
-                </li>
-                <li class="gallery__item5">
-                    <div class="bg"></div>
-                </li>
-            </ul> -->
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="footer__content">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/michel-guelin-772842115/" target="_blank"
-                        rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://github.com/Mchl37" target="_blank" rel="noopener noreferrer">Github</a></li>
-                <li><a href="https://www.frontendmentor.io/profile/Mchl37" target="_blank"
-                        rel="noopener noreferrer">Frontend Mentor</a></li>
-                <li><a href="https://codepen.io/mchl37" target="_blank" rel="noopener noreferrer">Codepen</a></li>
-                <li><a href="mailto:michel.guelin@mailo.com" target="_blank" rel="noopener noreferrer">Email</a></li>
-                <li>
-                    <p>👋🏻</p>
-                </li>
-            </ul>
-            <p id="copyright">Copyright &copy; 2022 Mchl | Inspiré par ...</p>
-        </div>
-    </div>
 </body>
 
 </html>
